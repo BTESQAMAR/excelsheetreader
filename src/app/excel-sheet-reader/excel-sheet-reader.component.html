@@ -1,0 +1,58 @@
+<!-- searching codes -->
+
+
+
+<div class=" mt-3">
+
+
+    <div class="container search fixed-middle">
+        <hr>
+        <div class="files text-center ">{{file}}</div>
+        <hr><br>
+        <input type="text" name="excelReader" class="form-control" placeholder="SEARCH HERE BY NAME , ADD , EMAIL ETC."
+            [(ngModel)]="searchText">
+        <span id="Username" class=" text-danger font-weight-bold  "></span>
+    </div>
+
+
+
+
+    <!-- excel Sheetfile read codes -->
+
+
+    <div class=" container excel mt-5">
+        <div class="input-group">
+
+            <div class="custom-file">
+                <input type="file" (change)="onFileChange($event)" multiple="true" class="custom-file-input"
+                    id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+
+                <label class="  choose-file custom-file-label" for="inputGroupFile04">CHOOSE YOUR FILE BY CLICKING
+                    HERE</label>
+            </div>
+            <div class="input-group-append">
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- table codes -->
+
+    <table class="table table-bordered table-dark mt-5">
+
+        <tbody>
+            <tr *ngFor="let rows of data   | filter:searchText  | paginate : {itemsPerPage:5,currentPage:p} ">
+                <td *ngFor="let cell of rows  | sorting  ">
+                    {{cell}}
+                </td>
+            </tr>
+        </tbody>
+
+
+    </table>
+    <pagination-controls class="text-center" (pageChange)="p=$event"> </pagination-controls>

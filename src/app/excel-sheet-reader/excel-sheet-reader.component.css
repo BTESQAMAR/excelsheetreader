@@ -1,0 +1,33 @@
+ .search
+ {
+    padding-top: 100px;
+  
+  
+    
+ }
+ .serch-here
+ {
+font-style: italic;
+
+ }
+
+ .files
+ {
+     color:darkred;
+     font-size: 30px;
+      font-weight: bold;
+     
+ }
+ 
+ .choose-file
+ {
+    
+     font-style: italic;
+ }
+
+ input{
+     font-style: italic;
+     
+ }
+
+ 
