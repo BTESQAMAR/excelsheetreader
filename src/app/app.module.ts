@@ -11,8 +11,9 @@ import { FormsModule} from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SortingPipe } from './sorting.pipe';
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule} from '@angular/material/table';
 import { OutputComponent } from './output/output.component';
+import { GridComponent } from './grid/grid.component';
 
 
 
@@ -23,7 +24,8 @@ import { OutputComponent } from './output/output.component';
     ExcelSheetReaderComponent, 
     NavbarComponent,
      SortingPipe,
-     OutputComponent
+     OutputComponent,
+     GridComponent
    
 
   ],

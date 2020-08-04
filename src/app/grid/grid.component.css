@@ -1,0 +1,25 @@
+.table
+{
+    cursor: pointer;
+   
+}
+
+.tab
+{
+    padding-top:2%;
+}
+
+.head
+{
+    padding-top: 8%;
+    font-weight: bold;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+
+.para
+{
+    color:darkred;
+    font-size: 15px;
+    font-weight:bold ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

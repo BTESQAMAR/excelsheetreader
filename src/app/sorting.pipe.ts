@@ -2,31 +2,30 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
 
-  name: 'sorting',
+  name: 'sort',
+  pure: true
 
  
 })
 export class SortingPipe implements PipeTransform {
+  transform(list: any[] ,column : string ): any[]{
 
-  transform(value: Array<any>, args?: any): any {
-  return  value.sort((a,b) =>{
-   let x = a.name;
-   let y = b.name;
-   if(x<y)
-   {
-     return -1;
-   }
-   else
-   {
-     return 1;
+  let sortedArray =  list.sort((a,b) =>{
 
-   }
+     
+if (a[column] > b[column] ){
+  return 1;
+}
 
-   return 0;
-
-   });
-  
-
+if (a[column] < b [column])
+{
+  return -1;
+}
+return 0;
+    });
+  return sortedArray;
   }
+
+
 
 }
